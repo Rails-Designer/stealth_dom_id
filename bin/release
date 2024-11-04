@@ -8,7 +8,7 @@ if [ -z "$VERSION" ]; then
   exit 1
 fi
 
-printf "module StealthDomId\n  VERSION = \"$VERSION\"\nend\n" > ./lib/stealth_dom_id/version.rb
+printf "# frozen_string_literal: true\n\nmodule StealthDomId\n  VERSION = \"$VERSION\"\nend\n" > ./lib/stealth_dom_id/version.rb
 bundle
 git add Gemfile.lock lib/stealth_dom_id/version.rb
 git commit -m "Bump version for $VERSION"
