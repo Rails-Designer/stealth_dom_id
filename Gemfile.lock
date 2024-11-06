@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    StealthDomId (0.1.0)
+    stealth_dom_id (0.2.0)
       actionview (>= 3.0, < 8.1)
       activesupport (>= 3.0, < 8.1)
 
@@ -115,10 +115,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  StealthDomId!
   minitest (~> 5.16)
   rake (~> 13.0)
   standard (~> 1.41)
+  stealth_dom_id!
 
 BUNDLED WITH
    2.5.22
