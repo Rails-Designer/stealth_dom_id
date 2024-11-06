@@ -3,7 +3,7 @@
 require_relative "lib/stealth_dom_id/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "StealthDomId"
+  spec.name = "stealth_dom_id"
   spec.version = StealthDomId::VERSION
   spec.authors = ["Rails Designer Developers"]
   spec.email = ["devs@railsdesigner.com"]
