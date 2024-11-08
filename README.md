@@ -1,6 +1,6 @@
 # stealth_dom_id
 
-stealth_dom_id extends Rails' [`dom_id`](https://github.com/rails/rails/blob/main/actionview/lib/action_view/record_identifier.rb) helper to generate DOM IDs using alternative columns instead of database primary keys. This helps prevent exposing internal database IDs
+stealth_dom_id extends Rails' [`dom_id`](https://github.com/rails/rails/blob/main/actionview/lib/action_view/record_identifier.rb) helper to generate DOM IDs using an alternative attribute instead of database primary keys. This helps prevent exposing internal database IDs
 
 
 ## Installation
@@ -20,21 +20,21 @@ gem install stealth_dom_id
 
 ## Usage
 
-This gem extends Rails' `dom_id` helper to use alternative columns instead of exposing database IDs in your HTML elements.
+This gem extends Rails' `dom_id` helper to use an alternative attribute instead of exposing database IDs in your HTML elements.
 
 Instead of:
 ```erb
 <%= dom_id(@user) %>
 # => "user_1"
 
-<%= dom_id(@user, column: :public_id) %>
+<%= dom_id(@user, attribute: :public_id) %>
 # => Outputs: "user_a1b2c3"
 ```
 
-The `column` attribute is optional. `prefix` attribute is also supported.
+`attribute` is optional. `prefix` attribute is, just with `dom_id`, also supported.
 
 ```erb
-<%= dom_id(@user, :admin, column: :public_id) %>
+<%= dom_id(@user, :admin, attribute: :public_id) %>
 # => Outputs: "admin_user_a1b2c3"
 ```
 

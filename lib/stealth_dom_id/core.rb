@@ -1,11 +1,11 @@
 module StealthDomId
-  class ColumnError < ArgumentError; end
+  class AttributeError < ArgumentError; end
 
   module Core
-    def dom_id(record_or_class, prefix = nil, column: nil)
+    def dom_id(record_or_class, prefix = nil, attribute: nil)
       unless record_or_class.is_a?(Class)
-        record_id = if column
-          record_key_for_dom_id_by_column(record_or_class, column: column)
+        record_id = if attribute
+          record_key_for_dom_id_by_attribute(record_or_class, attribute: attribute)
         else
           record_key_for_dom_id(record_or_class)
         end
@@ -23,12 +23,12 @@ module StealthDomId
     JOIN = "_".freeze
     NEW = "new".freeze
 
-    def record_key_for_dom_id_by_column(record, column:)
-      key = [convert_to_model(record).send(column)]
+    def record_key_for_dom_id_by_attribute(record, attribute:)
+      key = [convert_to_model(record).send(attribute)]
 
       key ? key.join(JOIN) : key
     rescue NoMethodError => e
-      raise ColumnError, "[StealthDomId] Column '#{column}' not found on #{record.class}"
+      raise AttributeError, "[StealthDomId] Attribute '#{attribute}' not found on #{record.class}"
     end
   end
 end

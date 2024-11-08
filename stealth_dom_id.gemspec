@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["Rails Designer Developers"]
   spec.email = ["devs@railsdesigner.com"]
 
-  spec.summary = "Extends Rails `dom_id` helper to support custom column-based identifiers"
-  spec.description = "stealth_dom_id extends Rails' `dom_id` helper to generate DOM IDs using alternative columns instead of database primary keys. This helps prevent exposing internal database IDs."
+  spec.summary = "Extends Rails `dom_id` helper to support custom attribute-based identifiers (example “slug”)"
+  spec.description = "stealth_dom_id extends Rails' `dom_id` helper to generate DOM IDs using an alternative attribute instead of database primary keys. This helps prevent exposing internal database IDs."
   spec.homepage = "https://github.com/Rails-Designer/stealth_dom_id/"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
