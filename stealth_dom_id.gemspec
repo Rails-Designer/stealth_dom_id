@@ -14,7 +14,6 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
-  spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/Rails-Designer/stealth_dom_id/"
 
   spec.files = Dir["{bin,app,config,db,lib,public}/**/*", "Rakefile", "README.md", "stealth_dom_id.gemspec", "Gemfile", "Gemfile.lock"]

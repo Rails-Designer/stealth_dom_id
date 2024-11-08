@@ -1,4 +1,4 @@
-# StealthDomId
+# stealth_dom_id
 
 stealth_dom_id extends Rails' [`dom_id`](https://github.com/rails/rails/blob/main/actionview/lib/action_view/record_identifier.rb) helper to generate DOM IDs using alternative columns instead of database primary keys. This helps prevent exposing internal database IDs
 
