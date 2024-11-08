@@ -26,12 +26,15 @@ Instead of:
 ```erb
 <%= dom_id(@user) %>
 # => "user_1"
-
-<%= dom_id(@user, attribute: :public_id) %>
-# => Outputs: "user_a1b2c3"
 ```
 
-`attribute` is optional. `prefix` attribute is, just with `dom_id`, also supported.
+You can use:
+```erb
+<%= dom_id(@user, attribute: :public_id) %>
+# => user_a1b2c3"
+```
+
+`attribute` is optional, it defaults to the primary_key. Just like with Rails' `dom_id`, the `prefix` attribute is also supported.
 
 ```erb
 <%= dom_id(@user, :admin, attribute: :public_id) %>
