@@ -31,7 +31,7 @@ Instead of:
 You can use:
 ```erb
 <%= dom_id(@user, attribute: :public_id) %>
-# => user_a1b2c3"
+# => "user_a1b2c3"
 ```
 
 `attribute` is optional, it defaults to the primary_key. Just like with Rails' `dom_id`, the `prefix` attribute is also supported.
