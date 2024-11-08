@@ -38,7 +38,7 @@ You can use:
 
 ```erb
 <%= dom_id(@user, :admin, attribute: :public_id) %>
-# => Outputs: "admin_user_a1b2c3"
+# => "admin_user_a1b2c3"
 ```
 
 
