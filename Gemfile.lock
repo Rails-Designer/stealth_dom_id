@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    stealth_dom_id (0.2.0)
+    stealth_dom_id (0.3.0)
       actionview (>= 3.0, < 8.1)
       activesupport (>= 3.0, < 8.1)
 
