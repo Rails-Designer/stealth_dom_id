@@ -4,6 +4,10 @@ module StealthDomId
       ActiveSupport.on_load(:action_view) do
         include StealthDomId::Core
       end
+
+      ActiveSupport.on_load(:view_component) do
+        ViewComponent::Base.include StealthDomId::Core
+      end
     end
   end
 end
