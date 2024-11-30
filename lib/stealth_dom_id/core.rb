@@ -3,6 +3,8 @@ module StealthDomId
 
   module Core
     def dom_id(record_or_class, prefix = nil, attribute: nil)
+      attribute ||= StealthDomId.configuration.default_attribute
+
       unless record_or_class.is_a?(Class)
         record_id = if attribute
           record_key_for_dom_id_by_attribute(record_or_class, attribute: attribute)
