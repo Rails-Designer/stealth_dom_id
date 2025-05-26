@@ -1,5 +1,8 @@
 # stealth_dom_id
 
+> [!IMPORTANT]
+> This gem is sunsetted. The [suggested solution and replacement is outlined in this article](https://railsdesigner.com/dom-id-without-primary-id/).
+
 stealth_dom_id extends Rails' [`dom_id`](https://github.com/rails/rails/blob/main/actionview/lib/action_view/record_identifier.rb) helper by allowing you to generate DOM IDs using any attribute instead of the default database primary keys. This helps keep your internal database IDs private.
 
 ## Installation
